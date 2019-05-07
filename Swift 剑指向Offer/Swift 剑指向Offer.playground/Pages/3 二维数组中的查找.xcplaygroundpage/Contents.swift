@@ -22,7 +22,7 @@ class ArrayLookup {
             // 用i表示行 j表示列
             var i = 0 ,j = colums-1
             while i < rows && j >= 0 {
-                var currentNum = nums[i][j]
+                let currentNum = nums[i][j]
                 if currentNum == num {
                     found = true
                     break
