@@ -133,3 +133,7 @@ link.remove(7)
 link.remove(3)
 
 link.printfLink()
+
+let a = 3.142344
+
+print(a.hashValue)
