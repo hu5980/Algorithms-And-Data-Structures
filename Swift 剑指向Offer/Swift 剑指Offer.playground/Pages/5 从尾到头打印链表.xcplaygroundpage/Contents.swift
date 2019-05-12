@@ -81,10 +81,15 @@ class Link{
     
     
     func reversalLink() {
-        let reversalRoot =  self.reversalLink(root)
+        let reversalRoot =  self.reversalLink_A(root)
         printfLink(reversalRoot)
     }
     
+    
+    /// 新建链表反转
+    ///
+    /// - Parameter node: <#node description#>
+    /// - Returns: <#return value description#>
     private func reversalLink(_ node:Node?) -> Node? {
         var curNode = node
         var newNode:Node? = nil
@@ -94,6 +99,31 @@ class Link{
             curNode = curNode?.next
         }
         return newNode
+    }
+    
+    
+    /// 原地反转
+    ///
+    /// - Parameter node: <#node description#>
+    /// - Returns: <#return value description#>
+    private func reversalLink_A(_ node:Node?) -> Node? {
+        
+        if node == nil {
+            return node
+        }
+        
+        let dummyNode = Node.init(-1)
+        dummyNode.next = node
+        let preNode = dummyNode.next
+        var curNode = preNode?.next
+        
+        while curNode != nil {
+            preNode?.next = curNode?.next
+            curNode?.next = dummyNode.next
+            dummyNode.next = curNode
+            curNode = preNode?.next
+        }
+        return dummyNode.next
     }
     
     
@@ -115,25 +145,25 @@ let link = Link()
 
 print("反转前")
 link.add(3)
-link.add(4)
-link.add(5)
-link.add(6)
-link.add(7)
+
+
 
 link.printfLink()
 
 print("反转后")
 
 link.reversalLink()
-
-link.search(4)?.value
-
-print("删除后")
-link.remove(7)
-link.remove(3)
-
 link.printfLink()
 
-let a = 3.142344
 
-print(a.hashValue)
+//link.search(4)?.value
+//
+//print("删除后")
+//link.remove(7)
+//link.remove(3)
+//
+//link.printfLink()
+//
+//let a = 3.142344
+//
+//print(a.hashValue)

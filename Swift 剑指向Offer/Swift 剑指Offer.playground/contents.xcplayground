@@ -8,5 +8,10 @@
         <page name='6 重建二叉树'/>
         <page name='7 用两个栈实现队列'/>
         <page name='8 旋转数组的最小数字'/>
+        <page name='9 斐波那契数列'/>
+        <page name='70 字符串反转'/>
+        <page name='71 有序数组的合并'/>
+        <page name='72 Hash 算法面试题'/>
+        <page name='73 求无序数组中的中位数'/>
     </pages>
 </playground>
