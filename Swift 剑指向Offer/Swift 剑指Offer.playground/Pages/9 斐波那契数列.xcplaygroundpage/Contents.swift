@@ -39,8 +39,6 @@ class Fibonacii {
             fibNTwo = fibNOne
             fibNOne = finN
         }
-        
-        
         return finN
     }
 }

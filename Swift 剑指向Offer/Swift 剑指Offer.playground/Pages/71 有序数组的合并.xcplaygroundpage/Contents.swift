@@ -16,7 +16,7 @@ class ArrayMerge {
         
         while p < nums1.count && q < nums2.count {
             if nums1[p] < nums2[q] {
-               nums.append(nums1[p])
+                nums.append(nums1[p])
                 p += 1
             }else {
                 nums.append(nums2[q])

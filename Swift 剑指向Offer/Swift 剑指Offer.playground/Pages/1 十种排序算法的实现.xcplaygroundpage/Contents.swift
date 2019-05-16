@@ -58,18 +58,44 @@ class Sort {
         return newNums
     }
     
-    func mergeSort(_ nums:[Int]) -> [Int] {
-        var newNums = nums
-        
-        return nums
+//    func mergeSort(_ nums:[Int]) -> [Int] {
+//        var newNums = nums
+//
+//        return nums
+//    }
+    
+    
+    
+    ///快速排序
+    func quickSort(_ nums:inout [Int] ,_ left:Int , _ right:Int ) {
+        if left >= right {
+            return
+        }
+        var i = left
+        var j = right
+        let key = nums[i]
+
+        while j > i {
+            while nums[j] >= key && i < j {
+                j -= 1
+            }
+            nums[i] = nums[j]
+            while nums[i] <= key && i < j {
+                i += 1
+            }
+            nums[j] = nums[i]
+        }
+        nums[i] = key
+        quickSort(&nums, left, i-1)
+        quickSort(&nums, i+1, right)
     }
 }
 
 let sort = Sort()
 
-let nums =  [8,3,5,9,10,1,-1,4,6,24]
+var nums =  [6,2,7,3,8,9]
 
-let newNums = sort.insertSort(nums)
+sort.quickSort(&nums, 0, nums.count - 1)
 
+print(nums)
 
-print(newNums)
