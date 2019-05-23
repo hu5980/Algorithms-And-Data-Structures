@@ -16,12 +16,12 @@ class Hash{
         let chars =  Array(str)
         
         for char in chars {
-            var value = map[char]
+            let value = map[char]
             map[char] = (value ?? 0) + 1
         }
         
         for char in chars {
-            var value = map[char] ?? 0
+            let value = map[char] ?? 0
             if value == 1 {
                 return char
             }

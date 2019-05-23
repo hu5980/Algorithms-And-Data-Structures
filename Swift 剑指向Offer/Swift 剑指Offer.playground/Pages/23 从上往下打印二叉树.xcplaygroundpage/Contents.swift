@@ -91,40 +91,44 @@ class Tree {
             print(node!.value)
         }
     }
-}
-
-
-/// 二叉树镜像
-///
-/// - Parameter node: <#node description#>
-/// - Returns: <#return value description#>
-func mirrorRecursiverly(_ node:Node?) -> Node? {
-    var newNode = node
-    if newNode == nil {
-        return newNode
-    }
-
-    var leftNode = newNode?.left
-    newNode?.left = newNode?.right
-    newNode?.right = leftNode
     
-    newNode?.left = mirrorRecursiverly(newNode?.left)
-    newNode?.right = mirrorRecursiverly(newNode?.right)
-    return newNode
+    // 层序遍历
+    /*
+     主要思路 用一个队列 利用队列先入先出的特性 ，先把root节点入队 然后出队 再把左右子树入队 只要队列不为0 就打印
+     */
+    func printLayerSortTree(_ node:Node?) {
+        if node == nil {
+            return
+        }
+        var queue = [Node]()
+        queue.append(node!)
+        while queue.count > 0 {
+            let node = queue.removeFirst()
+            print(node.value)
+            
+            if node.left != nil {
+                queue.append(node.left!)
+            }
+            
+            if node.right != nil {
+                queue.append(node.right!)
+            }
+        }
+    }
 }
+
 
 let tree = Tree()
 tree.add(5)
-tree.add(6)
 tree.add(3)
 tree.add(4)
-
+tree.add(1)
+tree.add(2)
+tree.add(6)
+tree.add(7)
 
 tree.printmidSortTree(tree.root)
 
+print("--------------")
 
-
-print("反转后的答案为")
-
-let new =  mirrorRecursiverly(tree.root)
-tree.printmidSortTree(new)
+tree.printLayerSortTree(tree.root)
