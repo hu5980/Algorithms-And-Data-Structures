@@ -66,8 +66,6 @@ class Solution {
         return find(root, value)
     }
     
-    
-    
     func add(_ value:Int)  {
         root = addOne(root, value)
     }
@@ -93,9 +91,7 @@ class Solution {
         
         sum -= path.last!
         path.removeLast()
-        
     }
-    
     
     
     func findPath(_ node:Node? , _ val:Int) -> [Int]? {

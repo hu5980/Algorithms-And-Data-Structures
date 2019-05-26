@@ -15,10 +15,11 @@ class Node {
     }
 }
 
+/*第一步仍然是根据原始链表的每个结点N创建对应的N'。（把N'链接在N的后面）*/
 private func cloneNodes(_ node:Node?) {
     var curNode = node
     while curNode != nil {
-        var cloneNode =  Node.init(curNode!.value)
+        let cloneNode =  Node.init(curNode!.value)
         cloneNode.next = curNode?.next
         cloneNode.sibling = nil
         curNode?.next = cloneNode
@@ -26,8 +27,9 @@ private func cloneNodes(_ node:Node?) {
     }
 }
 
+/*第二步设置复制出来的结点的Sibling。（把N'的Sibling指向N的Sibling）*/
 private func connectSiblingNodes(_ node:Node?) {
-    var curNode = node
+    let curNode = node
     
     while curNode != nil {
         if curNode?.sibling != nil {
@@ -37,6 +39,7 @@ private func connectSiblingNodes(_ node:Node?) {
     }
 }
 
+/*第三步把这个长链表拆分成两个链表：把奇数位置的结点用Next链接起来就是原始链表，偶数数值的则是复制链表*/
 private func reconnectNodes(_ node:Node?) -> Node? {
     var curNode = node
     var cloneNode:Node?

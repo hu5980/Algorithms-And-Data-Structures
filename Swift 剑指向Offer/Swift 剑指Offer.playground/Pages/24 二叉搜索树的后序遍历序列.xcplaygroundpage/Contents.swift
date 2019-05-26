@@ -89,10 +89,6 @@ verifySquenceOfBST([7,4,6,5])
 
 verifySquenceOfBST([4,11,8])
 
-
-
-
-
 public class TreeNode {
     public var val: Int
     public var left: TreeNode?

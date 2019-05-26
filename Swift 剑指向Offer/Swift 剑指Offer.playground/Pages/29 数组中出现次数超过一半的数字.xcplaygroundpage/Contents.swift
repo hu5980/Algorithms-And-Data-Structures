@@ -18,13 +18,13 @@ func findNum(_ nums:[Int]) -> Int {
     var currentNum = 0; //要求元素的个数变量
     
     for i in 0..<nums.count {
-        if(currentNum == 0){
+        if(currentNum == 0) {
             //如果要求的元素还没出现，设置要求的元素为现在要比较的元素
             currentAxis = nums[i];
             currentNum = 1;
             print("currentNum = \(currentNum)")
         } else {
-            if(currentAxis == nums[i]){
+            if(currentAxis == nums[i]) {
                 currentNum += 1
                 print("currentNum = \(currentNum)")
             }else {
