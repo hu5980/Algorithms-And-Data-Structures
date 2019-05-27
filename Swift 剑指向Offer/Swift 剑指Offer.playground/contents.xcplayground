@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos'>
+<playground version='6.0' target-platform='macos' display-mode='raw'>
     <pages>
         <page name='1 十种排序算法的实现'/>
         <page name='3 二维数组中的查找'/>
@@ -28,9 +28,11 @@
         <page name='27 二叉搜索树与双向链表      3'/>
         <page name='28 字符串的排列'/>
         <page name='29 数组中出现次数超过一半的数字'/>
+        <page name='30 最小的K个数'/>
         <page name='70 字符串反转'/>
         <page name='71 有序数组的合并'/>
         <page name='72 Hash 算法面试题'/>
         <page name='73 求无序数组中的中位数'/>
+        <page name='74 数组中任意第K大的数字'/>
     </pages>
 </playground>

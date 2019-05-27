@@ -22,20 +22,72 @@ func findNum(_ nums:[Int]) -> Int {
             //如果要求的元素还没出现，设置要求的元素为现在要比较的元素
             currentAxis = nums[i];
             currentNum = 1;
-            print("currentNum = \(currentNum)")
         } else {
             if(currentAxis == nums[i]) {
                 currentNum += 1
-                print("currentNum = \(currentNum)")
             }else {
                 currentNum -= 1
-                print("currentNum = \(currentNum)")
             }
         }
     }
     return currentAxis; //返回最终结果的位置
 }
 
-let a  = findNum([5,4,3,2,4,6])
+let a  = findNum([2,3,2,4,2,5,2,5,2,2])
 
+
+
+
+
+
+
+func partition(_ nums:inout [Int], _ left:Int , _ right:Int) -> Int {
+    
+    var i = left
+    var j = right
+    let key = nums[left]
+    
+    while i != j {
+        while nums[j] >= key && i < j {
+            j -= 1
+        }
+        
+        while nums[i] <= key && i < j {
+            i += 1
+        }
+        
+        if i < j {
+            nums.swapAt(i, j)
+        }
+    }
+    nums.swapAt(left, i)
+    return i
+}
+
+
+func baseQuickSort(_ nums:inout [Int] ,_ left:Int , _ right:Int) {
+    if left >= right {
+        return
+    }
+    
+    var newLeft = left
+    var newRight = right
+    var index = partition(&nums, left, right)
+    
+    while index != nums.count / 2 {
+        if index >  nums.count / 2 {
+            newRight = index - 1
+            index = partition(&nums, newLeft, newRight)
+        }else {
+            newLeft = index + 1
+            index = partition(&nums, newLeft, newRight)
+        }
+    }
+    
+    print("result = \(nums[index])")
+}
+
+
+var nums = [2,3,5,4,2,2,2]
+baseQuickSort(&nums, 0, nums.count - 1)
 
