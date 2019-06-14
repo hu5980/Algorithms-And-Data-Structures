@@ -42,8 +42,6 @@ func permutation(_ str:String?) {
     permutation(str!, 0, str!.count)
 }
 
-
-
 let str = exchange("abc", index1: 0, index2: 1)
 permutation("aabdef")
 print(set)

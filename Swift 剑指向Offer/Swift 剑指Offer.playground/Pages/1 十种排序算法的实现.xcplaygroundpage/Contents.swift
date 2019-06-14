@@ -101,13 +101,37 @@ class Sort {
         quickSort(&nums, left, i-1)
         quickSort(&nums, i+1, right)
     }
+    
+    func quickSort_A(_ nums:inout [Int] ,_ left:Int , _ right:Int ) {
+        if left >= right {
+            return
+        }
+        var i = left
+        var j = right
+        let key = nums[i]
+        
+        while i != j {
+            while nums[j] >= key && j > i {
+                j -= 1
+            }
+            while nums[i] <= key && j > i {
+                i += 1
+            }
+            if j > i {
+                nums.swapAt(i, j)
+            }
+        }
+        nums.swapAt(left, i)
+        quickSort(&nums, 0, i-1)
+        quickSort(&nums, i+1, right)
+    }
 }
 
 let sort = Sort()
 
 var nums =  [6,2,7,3,8,9]
 
-sort.quickSort(&nums, 0, nums.count - 1)
+sort.quickSort_A(&nums, 0, nums.count - 1)
 
 print(nums)
 

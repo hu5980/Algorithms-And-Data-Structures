@@ -3,7 +3,15 @@
 import Foundation
 
 
-/*利用快速排序的方式来做 */
+/*:
+ ## 利用快速排序的方式来做
+ 快速排序的时间复杂度是o(nlog(n))的 为什么 这里是O(n)呢
+ 
+ 我们都知道快排是向下递归的，那么在平均或者说是期望情况下它找到的永远是中间位置，这就有点类似折半查找了，所以第一次它会对n个数进行划分，第二次循环它只会进入一边，然后对n/2个数进行划分，以此类推，总共需要对n+n/2+n/4+...+2+1=n(1+1/2+1/4+...)+2+1个数进行操作，1+1/2+1/4+...<2，因此该表达式小于2n，所以它的期望时间复杂度为O(n)
+ 
+ 这种算法会改变 数组
+ 
+ */
 func partition(_ nums:inout [Int], _ left:Int , _ right:Int) -> Int {
    
     var i = left
@@ -61,7 +69,9 @@ let leastNums = getLeastNumber(&nums, 0, nums.count - 1, 10)
 print(leastNums!)
 
 
-/*利用二叉堆来做*/
+/*:
+ 利用二叉堆来做
+ */
 
 
 func leftChildIndex(_ parent:Int) -> Int {
