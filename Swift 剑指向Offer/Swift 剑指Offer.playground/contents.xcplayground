@@ -29,10 +29,19 @@
         <page name='28 字符串的排列'/>
         <page name='29 数组中出现次数超过一半的数字'/>
         <page name='30 最小的K个数'/>
+        <page name='31 连续子数组的最大和'/>
+        <page name='32 1-n整数中1出现的次数     5'/>
+        <page name='33 把数组排成最小的数        5'/>
+        <page name='34 丑数'/>
+        <page name='35 第一个只出现一次的字符'/>
+        <page name='36 数组中的逆序对'/>
+        <page name='37 两个数组的第一个公共节点'/>
+        <page name='38 数字在排序数组中出现的次数'/>
         <page name='70 字符串反转'/>
         <page name='71 有序数组的合并'/>
         <page name='72 Hash 算法面试题'/>
         <page name='73 求无序数组中的中位数'/>
         <page name='74 数组中任意第K大的数字'/>
+        <page name='Untitled Page'/>
     </pages>
 </playground>

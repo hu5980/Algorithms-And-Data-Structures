@@ -36,11 +36,6 @@ func findNum(_ nums:[Int]) -> Int {
 let a  = findNum([2,3,2,4,2,5,2,5,2,2])
 
 
-
-
-
-
-
 func partition(_ nums:inout [Int], _ left:Int , _ right:Int) -> Int {
     
     var i = left

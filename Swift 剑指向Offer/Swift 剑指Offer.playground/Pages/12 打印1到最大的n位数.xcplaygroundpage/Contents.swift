@@ -13,11 +13,11 @@ class PrintDigits {
             return
         }
         
-        var number:[Character] = Array.init(repeating: "9", count: n)
-        var subNumber:[Character] = Array.init(repeating: "1", count: 1)
+        let number:[Character] = Array.init(repeating: "9", count: n)
+        let subNumber:[Character] = Array.init(repeating: "1", count: 1)
         
-        var strNumber = String.init(number)
-        var strSubNumber = String.init(subNumber)
+        let strNumber = String.init(number)
+        let strSubNumber = String.init(subNumber)
         
         while strNumber < strSubNumber {
             

@@ -10,7 +10,7 @@ import Foundation
 
 class Fibonacii {
     func fibonacii_a(_ num:Int64) -> Int64 {
-        if num <=   0 {
+        if num <= 0 {
             return 0
         }
         
