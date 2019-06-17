@@ -44,7 +44,7 @@ class Student {
     func hashCode() -> Int {
         let B = 40
         var hash = 0
-        var M = 1000
+        let M = 1000
         hash = ( hash * B + garde ) % M
         print(hash)
         hash = ( hash * B + cls ) % M
