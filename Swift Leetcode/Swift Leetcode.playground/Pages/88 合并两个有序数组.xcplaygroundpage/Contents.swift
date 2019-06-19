@@ -19,20 +19,6 @@ import Foundation
  输出: [1,2,2,3,5,6]
  */
 
-/*:
- 方法一 ：暴力法 时间复杂度O(m)*o(n) 空间复杂度O(1)
- 
- */
-
-func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
-    for i in 0..<m {
-        for j in 0..<n {
-            if nums1[i] < nums2[j] {
-                
-            }
-        }
-    }
-}
 
 /*:
  方法二
@@ -76,10 +62,9 @@ func merge_2(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
         k -= 1
         j -= 1
     }
-    
 }
 
-/*:### 方法三
+/*:### 方法四
   新创建一个数组 空间复杂度O(n) 时间复杂度O(n)
  */
 func merge_3(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {

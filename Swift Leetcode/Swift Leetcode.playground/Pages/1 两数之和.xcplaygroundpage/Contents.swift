@@ -25,8 +25,9 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     
     for i in 0..<nums.count {
         map[nums[i]] = i
+        
     }
-    
+    print(map)
     for i in 0..<nums.count {
         let find = target - nums[i]
         if map[find] != nil &&  i != map[find] {
@@ -36,3 +37,6 @@ func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     }
     return [Int]()
 }
+
+
+twoSum([2,2,3,2,3], 6)

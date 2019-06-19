@@ -11,5 +11,9 @@
         <page name='88 合并两个有序数组'/>
         <page name='167 两数之和 II 输入有序数组'/>
         <page name='1 两数之和'/>
+        <page name='24 两两交换链表中的节点'/>
+        <page name='15 三数之和   *****'/>
+        <page name='242 有效的字母异位词'/>
+        <page name='49 字母异位词分组'/>
     </pages>
 </playground>

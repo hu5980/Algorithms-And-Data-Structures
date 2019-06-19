@@ -30,6 +30,8 @@ func twoSum(_ numbers: [Int], _ target: Int) -> [Int] {
         map[numbers[i]] = i
     }
     
+    print(map)
+    
     for i in 0..<numbers.count {
         if map[target - numbers[i]] != nil {
             return [i + 1,map[target - numbers[i]]! + 1]
