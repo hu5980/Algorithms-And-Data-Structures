@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='raw'>
+<playground version='6.0' target-platform='macos' display-mode='rendered'>
     <pages>
         <page name='225 用队列实现栈'/>
         <page name='206 反转链表'/>
@@ -14,6 +14,9 @@
         <page name='24 两两交换链表中的节点'/>
         <page name='15 三数之和   *****'/>
         <page name='242 有效的字母异位词'/>
-        <page name='49 字母异位词分组'/>
+        <page name='49 字母异位词分组   ****'/>
+        <page name='1047. 删除字符串中的所有相邻重复项'/>
+        <page name='1021. 删除最外层的括号'/>
+        <page name='84. 柱状图中最大的矩形  *****'/>
     </pages>
 </playground>
