@@ -25,6 +25,8 @@ import Foundation
  */
 
 
+
+
 /*
  方法一 ：暴力法  我们可以想到，两个柱子间矩形的高由它们之间最矮的柱子决定  因此，我们可以考虑所有两两柱子之间形成的矩形面积，该矩形的高为它们之间最矮柱子的高度，宽为它们之间的距离，这样可以找到所要求的最大面积的矩形。
  
@@ -52,6 +54,35 @@ func largestRectangleArea(_ heights: [Int]) -> Int {
     }
     return area
 }
+
+/*
+ 方法二： 使用栈来做这个题目
+ 
+ 
+ */
+
+func largestRectangleArea_1(_ heights: [Int]) -> Int {
+    var area = 0
+    var stack:[Int] = [Int]()
+    stack.append(-1)
+    
+    for index in 0..<heights.count {
+        while stack.last !=  -1  && heights[index] <= heights[stack.last!]  {
+            let height = heights[stack.removeLast()]
+            area = max(area, (index - stack.last! - 1) * height)
+        }
+        stack.append(index)
+    }
+    
+    while stack.last! != -1 {
+        let height = heights[stack.removeLast()]
+        area = max(area, height * (heights.count - stack.last! - 1))
+    }
+    
+    return area
+}
+
+largestRectangleArea_1([2,1,5,6,2,3])
 
 
 let area = largestRectangleArea([4,2,0,3,2,4,3,4])
