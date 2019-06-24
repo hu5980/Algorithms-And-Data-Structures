@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='raw'>
+<playground version='6.0' target-platform='macos' display-mode='rendered'>
     <pages>
         <page name='225 用队列实现栈'/>
         <page name='206 反转链表'/>
@@ -23,5 +23,7 @@
         <page name='174. 地下城游戏'/>
         <page name='104 二叉树的最大深度'/>
         <page name='101. 对称二叉树'/>
+        <page name='111. 二叉树的最小深度'/>
+        <page name='783. 二叉搜索树结点最小距离  *****'/>
     </pages>
 </playground>

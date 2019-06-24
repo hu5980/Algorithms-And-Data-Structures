@@ -53,10 +53,6 @@ func myPow(_ x: Double, _ n: Int) -> Double {
  
  */
 
-//
-//func myPow
-
-
 func myPow_1(_ x: Double, _ n: Int) -> Double {
     if x == Double(0) || n == 0 {
         return 1

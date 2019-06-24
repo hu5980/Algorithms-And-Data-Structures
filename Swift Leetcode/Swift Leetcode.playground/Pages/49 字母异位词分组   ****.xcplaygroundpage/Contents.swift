@@ -88,7 +88,7 @@ func groupAnagrams_1(_ strs: [String]) -> [[String]] {
     
     for str in strs {
         var num:[Int] = Array .init(repeating: 0, count: 26)
-        var strChars:[Character] = Array.init(str)
+        let strChars:[Character] = Array.init(str)
 
         for char in strChars {
             let index = char.toInt() - Character.init("a").toInt()

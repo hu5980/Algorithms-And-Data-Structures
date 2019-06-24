@@ -74,8 +74,8 @@ func rotate_2(_ nums: inout [Int], _ k: Int) {
 }
 
 
-var nums = [1,2]
+var nums = [1,2,3,4,5,6,7]
 
-rotate_2(&nums, 3)
+rotate(&nums, 3)
 
 print(nums)

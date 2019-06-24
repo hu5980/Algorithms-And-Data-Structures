@@ -62,7 +62,7 @@ class Solution {
         if head != nil || head?.next != nil {
             return head
         }
-        var next = head?.next
+        let next = head?.next
         head?.next = swapPairs_1(next?.next)
         next?.next = head
         return next
