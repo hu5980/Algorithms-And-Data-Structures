@@ -33,4 +33,5 @@ import Foundation
 
 func calculateMinimumHP(_ dungeon: [[Int]]) -> Int {
     
+    return 0
 }

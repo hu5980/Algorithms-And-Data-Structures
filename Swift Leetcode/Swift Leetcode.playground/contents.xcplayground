@@ -20,10 +20,13 @@
         <page name='84. 柱状图中最大的矩形  *****'/>
         <page name='441. 排列硬币'/>
         <page name='50. Pow(x, n)'/>
-        <page name='174. 地下城游戏'/>
-        <page name='104 二叉树的最大深度'/>
-        <page name='101. 对称二叉树'/>
-        <page name='111. 二叉树的最小深度'/>
-        <page name='783. 二叉搜索树结点最小距离  *****'/>
+        <page name='174. 地下城游戏    ******'/>
+        <page name='104 二叉树的最大深度  递归'/>
+        <page name='101. 对称二叉树  递归'/>
+        <page name='111. 二叉树的最小深度  递归'/>
+        <page name='783. 二叉搜索树结点最小距离  ***** 递归'/>
+        <page name='257. 二叉树的所有路径  递归'/>
+        <page name='938. 二叉搜索树的范围和'/>
+        <page name='236. 二叉树的最近公共祖先'/>
     </pages>
 </playground>
