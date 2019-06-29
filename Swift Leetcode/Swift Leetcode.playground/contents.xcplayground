@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='macos' display-mode='rendered'>
+<playground version='6.0' target-platform='macos' display-mode='raw'>
     <pages>
         <page name='225 用队列实现栈'/>
         <page name='206 反转链表'/>
@@ -24,9 +24,17 @@
         <page name='104 二叉树的最大深度  递归'/>
         <page name='101. 对称二叉树  递归'/>
         <page name='111. 二叉树的最小深度  递归'/>
-        <page name='783. 二叉搜索树结点最小距离  ***** 递归'/>
         <page name='257. 二叉树的所有路径  递归'/>
         <page name='938. 二叉搜索树的范围和'/>
         <page name='236. 二叉树的最近公共祖先'/>
+        <page name='242. 有效的字母异位词'/>
+        <page name='3. 无重复字符的最长子串  *****'/>
+        <page name='209 .长度最小的子数组  ***'/>
+        <page name='692. 前K个高频单词  *****'/>
+        <page name='726. 原子的数量  ******'/>
+        <page name='103. 二叉树的锯齿形层次遍历   ****'/>
+        <page name='102. 二叉树的层次遍历    ****'/>
+        <page name='297. 二叉树的序列化与反序列化'/>
+        <page name='235. 二叉搜索树的最近公共祖先'/>
     </pages>
 </playground>
