@@ -56,8 +56,6 @@ class Solution {
     /*:
      方法二 递归的方式去做 交换前面两个 然后后面的子串使用递归的方式继续交换
      */
-
-    
     func swapPairs_1(_ head: ListNode?) -> ListNode? {
         if head != nil || head?.next != nil {
             return head

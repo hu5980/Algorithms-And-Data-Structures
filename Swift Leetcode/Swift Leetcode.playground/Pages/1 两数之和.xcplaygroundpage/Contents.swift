@@ -20,23 +20,34 @@ import Foundation
 
 // 使用hashMap  考虑重复元素
 
+//func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
+//    var map:[Int:Int] = [Int:Int]()
+//
+//    for i in 0..<nums.count {
+//        map[nums[i]] = i
+//
+//    }
+//    print(map)
+//    for i in 0..<nums.count {
+//        let find = target - nums[i]
+//        if map[find] != nil &&  i != map[find] {
+//            print(nums[i])
+//            return [i ,map[target - nums[i]]!]
+//        }
+//    }
+//    return [Int]()
+//}
+
 func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
     var map:[Int:Int] = [Int:Int]()
-    
+    let res:[Int] = [Int]()
     for i in 0..<nums.count {
-        map[nums[i]] = i
-        
-    }
-    print(map)
-    for i in 0..<nums.count {
-        let find = target - nums[i]
-        if map[find] != nil &&  i != map[find] {
-            print(nums[i])
-            return [i ,map[target - nums[i]]!]
+        if map[target - nums[i]] != nil {
+            return [map[target - nums[i]]!,i]
         }
+        map[nums[i]] = i
     }
-    return [Int]()
+    return res
 }
-
 
 twoSum([2,2,3,2,3], 6)

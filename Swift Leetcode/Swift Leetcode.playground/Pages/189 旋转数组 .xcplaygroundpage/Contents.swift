@@ -30,6 +30,7 @@ import Foundation
 
 func rotate(_ nums: inout [Int], _ k: Int) {
     var rotateCount = k
+    
     if  k > nums.count {
         rotateCount = k % nums.count
     }
