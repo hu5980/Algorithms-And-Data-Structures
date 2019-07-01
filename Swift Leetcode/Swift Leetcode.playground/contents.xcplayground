@@ -36,5 +36,9 @@
         <page name='102. 二叉树的层次遍历    ****'/>
         <page name='297. 二叉树的序列化与反序列化'/>
         <page name='235. 二叉搜索树的最近公共祖先'/>
+        <page name='290. 单词规律'/>
+        <page name='98. 验证二叉搜索树'/>
+        <page name='220. 存在重复元素 III'/>
+        <page name='315. 计算右侧小于当前元素的个数  ******'/>
     </pages>
 </playground>
