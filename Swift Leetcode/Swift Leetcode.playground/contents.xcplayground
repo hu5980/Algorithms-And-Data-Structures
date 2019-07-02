@@ -40,5 +40,6 @@
         <page name='98. 验证二叉搜索树'/>
         <page name='220. 存在重复元素 III'/>
         <page name='315. 计算右侧小于当前元素的个数  ******'/>
+        <page name='120. 三角形最小路径和'/>
     </pages>
 </playground>
