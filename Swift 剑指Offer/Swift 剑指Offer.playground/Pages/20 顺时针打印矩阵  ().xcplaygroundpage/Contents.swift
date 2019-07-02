@@ -8,7 +8,7 @@ import Foundation
 
 func printMatrixInCircle( _ nums:[[Int]] ) -> [Int]{
     
-    return nums
+    return [Int]()
 }
 
 let matrix = [[ 9, 8, 7, 6],
