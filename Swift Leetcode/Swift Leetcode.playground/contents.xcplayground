@@ -40,6 +40,11 @@
         <page name='98. 验证二叉搜索树'/>
         <page name='220. 存在重复元素 III'/>
         <page name='315. 计算右侧小于当前元素的个数  ******'/>
-        <page name='120. 三角形最小路径和'/>
+        <page name='120. 三角形最小路径和   *****'/>
+        <page name='198. 打家劫舍 I ****'/>
+        <page name='213. 打家劫舍 II *****'/>
+        <page name='200. 岛屿数量   ******'/>
+        <page name='64. 最小路径和 '/>
+        <page name='343. 整数拆分   ****'/>
     </pages>
 </playground>

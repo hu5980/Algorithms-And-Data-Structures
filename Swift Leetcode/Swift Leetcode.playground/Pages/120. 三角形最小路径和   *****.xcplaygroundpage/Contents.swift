@@ -12,7 +12,7 @@ import Foundation
  
  [
          [2],
-        [3,4],
+        [5,4],
        [6,5,7],
       [4,1,8,3]
  ]
@@ -31,14 +31,49 @@ import Foundation
  //递推式可以很容易看出
  //中间点
  minPath[i][j] = min(minPath[i-1][j-1] + triangle[i][j], minPath[i-1][j] + triangle[i][j]);
-
- 
  */
 
 
 
 class Solution {
     func minimumTotal(_ triangle: [[Int]]) -> Int {
-        
+        let rows = triangle.count
+        if rows == 0 {
+            return 0
+        }else if rows == 1 {
+            return triangle[0][0]
+        }
+        var dp:[Int] = Array.init(triangle.last!)
+        for i in (0...rows-2).reversed() {
+            for j in 0..<triangle[i].count {
+                dp[j] = min(dp[j], dp[j+1]) + triangle[i][j]
+            }
+        }
+        return dp[0]
     }
 }
+
+
+/*递归的去做 会超出时间限制*/
+class Solution1 {
+    func miniLadderPathSum(_ ladder: [[Int]],_ preIndex:Int) -> Int {
+        guard ladder.count > 0 else {return 0}
+        let row = ladder[0]
+        let subLadder:[[Int]] = Array.init(ladder[1...])
+        let sum1 = row[preIndex] + miniLadderPathSum(subLadder, preIndex)
+        let sum2 = row[preIndex+1] + miniLadderPathSum(subLadder, preIndex + 1)
+        return min(sum1, sum2)
+    }
+
+    func minimumTotal(_ triangle: [[Int]]) -> Int {
+        return triangle[0][0] + miniLadderPathSum(Array.init(triangle[1...]), 0)
+    }
+}
+
+
+let s = Solution()
+
+let res = s.minimumTotal([[3]])
+
+print(res)
+
