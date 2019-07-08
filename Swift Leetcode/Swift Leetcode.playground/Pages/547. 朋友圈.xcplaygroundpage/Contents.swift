@@ -27,35 +27,31 @@ import Foundation
  
  */
 class Solution {
-    private var studentCount:Int = 0  // 学生数量
-    private var isVisited:[Bool] = [Bool]()  // 有没有访问过
-    private var M:[[Int]] = [[Int]]()
+    private var students:Int = 0  // 学生数量
     
-    func dfs(_ i:Int) {
-        isVisited[i] = true
-        print(isVisited)
-        for j in 0..<studentCount {
-            if !isVisited[j] && M[i][j] == 1{
-                dfs(j)
+    func dfs(_ i:Int,_ M:[[Int]],_ visited: inout [Bool]) {
+        visited[i] = true
+        for j in 0..<students {
+            if M[i][j] == 1 && !visited[j] {
+                dfs(j, M, &visited)
             }
         }
     }
     
     func findCircleNum(_ M: [[Int]]) -> Int {
         var count = 0
-        studentCount = M.count
-        self.M = M
-        isVisited = [Bool].init(repeating: false, count: studentCount)
-        if studentCount == 0 {
+        students = M.count
+        if students == 0 {
             return count
         }
-        
-        for i in 0..<studentCount {
-            if !isVisited[i] {
+        var visited:[Bool] = [Bool].init(repeating: false, count: students * students)
+        for i in 0..<students {
+            if !visited[i] {
                 count += 1
-                dfs(i)
+                dfs(i, M, &visited)
             }
         }
+        
         return count
     }
 }
@@ -64,7 +60,6 @@ class Solution {
 class Solution1 {
     
     class UnionFind {
-        
         var count:Int
         var parent:[Int]
         var rank:[Int]
@@ -77,13 +72,11 @@ class Solution1 {
                 parent[i] = i
             }
         }
-        
         func getSize() ->Int{
             return self.count
         }
-        
         //找到p所对应的集合的rootId
-        func find(_ p: Int) -> Int {
+        private func find(_ p: Int) -> Int {
             var cp = p
             while cp != self.parent[cp] { //路径压缩
                 cp = self.parent[cp]
@@ -115,23 +108,20 @@ class Solution1 {
             self.count -= 1
         }
     }
-    var studentCount = 0
+
 
     func findCircleNum(_ M: [[Int]]) -> Int {
-        var count = 0
-        studentCount = M.count
-        if studentCount == 0 {
-            return count
+        if M.count == 0 {
+            return 0
         }
-        let uf = UnionFind.init(studentCount)
-        for i in 0..<studentCount {
-            for j in 0..<studentCount {
-                if M[i][j] == 1 && uf.connected(i, j) {
+        let uf = UnionFind.init(M.count)
+        for i in 0..<M.count {
+            for j in 0..<M.count {
+                if M[i][j] == 1 && !uf.connected(i, j) {
                     uf.union(i, j)
                 }
             }
         }
-        
         return uf.count
     }
 }

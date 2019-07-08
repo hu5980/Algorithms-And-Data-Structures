@@ -38,9 +38,11 @@ import Foundation
 
 class Solution {
     
-    func dfs( _ i:Int,)  {
-        
+
+    func dfs(<#parameters#>) -> <#return type#> {
+        <#function body#>
     }
+    
     
     func canFinish(_ numCourses: Int, _ prerequisites: [[Int]]) -> Bool {
         guard numCourses > 0   else { return false }
@@ -48,10 +50,21 @@ class Solution {
             return true
         }
         
-    
+        var res = true
+
         
+        var visiting:[Int] = [Int]()
+        var visited:[Int] = [Int]()
+        var orderedList:[Int] = [Int]()
         
+        for i in prerequisites {
+            
+        }
         
-        return false
+        return res
     }
 }
+
+
+let s = Solution()
+s.canFinish(2, [[1,0],[0,1]])

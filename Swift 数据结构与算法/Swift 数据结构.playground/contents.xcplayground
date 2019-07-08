@@ -3,5 +3,6 @@
     <pages>
         <page name='哈希表'/>
         <page name='堆'/>
+        <page name='并查集'/>
     </pages>
 </playground>
