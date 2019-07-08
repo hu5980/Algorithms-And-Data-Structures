@@ -38,15 +38,50 @@ public class TreeNode {
  方法一 ：递归
  */
 
-func maxDepth(_ root: TreeNode?) -> Int {
-    if root == nil {
-        return 0
-    }else{
-        return max(maxDepth(root?.left), maxDepth(root?.right)) + 1
+class Solution {
+    func maxDepth(_ root: TreeNode?) -> Int {
+        if root == nil {
+            return 0
+        }
+        return 1 + max(maxDepth(root?.left), maxDepth(root?.right))
     }
 }
 
 /*
  方法二 迭代法
  */
+
+class Solution1 {
+    
+    struct NewTreeNode {
+        public var depth:Int
+        public var node:TreeNode
+        init(_ node:TreeNode,_ depth:Int) {
+            self.depth = depth
+            self.node = node
+        }
+    }
+
+    func maxDepth(_ root: TreeNode?) -> Int {
+        var maxDepth = 0
+        if root == nil {
+            return maxDepth
+        }
+        
+        var queue:[NewTreeNode] = [NewTreeNode]()
+        queue.append(NewTreeNode(root!, 1))
+        while queue.count > 0 {
+            let newNode = queue.removeFirst()
+            maxDepth = max(maxDepth, newNode.depth)
+            if newNode.node.left != nil {
+                queue.append(NewTreeNode.init(newNode.node.left!, maxDepth + 1))
+            }
+            if newNode.node.right != nil {
+                queue.append( NewTreeNode.init(newNode.node.right!, maxDepth + 1))
+            }
+            
+        }
+        return maxDepth
+    }
+}
 

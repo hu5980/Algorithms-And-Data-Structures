@@ -148,8 +148,9 @@ class Solution1 {
 
 class Solution2 {
     
-    
-    
+    /**
+     使用并查集来做
+     */
     class UnionFind {
         
         var count:Int
@@ -163,8 +164,6 @@ class Solution2 {
             for i in 0..<n {
                 parent[i] = i
             }
-            
-           
         }
     
         func getSize() ->Int{
@@ -210,7 +209,7 @@ class Solution2 {
     private let directions:[[Int]] = [[1,0],[0,1]]//设置方向的数组 右、下
     
     private func getIndex(_ x:Int,_ y:Int) ->Int {
-        return x * cols + 1
+        return x * cols + y
     }
     
     func numIslands(_ grid: [[Character]]) -> Int {

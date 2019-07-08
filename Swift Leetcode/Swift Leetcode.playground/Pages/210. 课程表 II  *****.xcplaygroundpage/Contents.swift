@@ -36,3 +36,10 @@ import Foundation
  拓扑排序也可以通过 BFS 完成。
  
  */
+
+
+class Solution {
+    func findOrder(_ numCourses: Int, _ prerequisites: [[Int]]) -> [Int] {
+        
+    }
+}
