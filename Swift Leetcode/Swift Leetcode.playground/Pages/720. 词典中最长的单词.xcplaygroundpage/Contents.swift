@@ -44,16 +44,14 @@ class Trie {
     }
     
     private var root:Node
-    private var size:Int
+
     
     init() {
         root = Node()
-        size = 0
+
     }
     
-    func getSize() -> Int {
-        return size
-    }
+
     
     public func add(_ word:String) {
         var cur = root
@@ -66,47 +64,34 @@ class Trie {
         
         if cur.isWord == false {
             cur.isWord = true
-            size += 1
         }
     }
-    
-    public func contain(_ word:String) -> Bool {
-        var cur = root
-        for c in word {
-            if cur.map[c] == nil {
-                return false
-            }
-            cur = cur.map[c]!
-        }
-        return cur.isWord
-    }
-    
-    public func searchWith(_ prefix: String) -> Bool {
-        var cur = root
-        for c in prefix {
-            if cur.map[c] == nil {
-                return false
-            }
-            cur = cur.map[c]!
-        }
-        return true
-    }
-    
+
     public func longestInDictionary()->String {
         return longest(root, "")
     }
     
     private func longest(_ node:Node? ,_ curRes:String)-> String {
         if node == nil { return curRes }
+       
         var result = curRes
         for key in node!.map.keys {
-           var res =  longest(node!.map[key]!,"\(curRes)\(key)")
-            result = result.count > res.count ?  result : res
+            if node!.map[key]!.isWord {
+                let res =  longest(node!.map[key]!,"\(curRes)\(key)")
+                if result.count > res.count {
+                    break
+                }else if result.count == res.count {
+                    result = result > res ? res : result
+                }else {
+                    result = res
+                }
+            }else {
+                continue
+            }
         }
         return result
     }
-    
-    
+
 }
 
 class Solution {
@@ -121,4 +106,7 @@ class Solution {
 
 
 let s = Solution()
-s.longestWord(["a","ap","app","appl","apple","appla"])
+let res = s.longestWord(["n","j","sl","yyd","slo","jk","jkdt","y","yy"])
+
+print(res)
+

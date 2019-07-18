@@ -67,7 +67,6 @@ class WordDictionary {
         if nextIdx == chars.count {
             return node.isWord
         }
-        
         for (nextChar, nextNode) in node.map where nextChar == chars[nextIdx] || chars[nextIdx] == "." {
             if bfs(nextNode, chars, nextIdx + 1) {
                 return true
