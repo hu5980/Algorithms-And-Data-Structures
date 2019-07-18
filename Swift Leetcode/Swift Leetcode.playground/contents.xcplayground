@@ -54,5 +54,8 @@
         <page name='720. 词典中最长的单词'/>
         <page name='208 实现Trie'/>
         <page name='211 添加与搜索单词'/>
+        <page name='169 求众数'/>
+        <page name=' 53 最大子序和'/>
+        <page name='240. 搜索二维矩阵 II'/>
     </pages>
 </playground>
