@@ -50,9 +50,7 @@ class Trie {
         root = Node()
 
     }
-    
 
-    
     public func add(_ word:String) {
         var cur = root
         for c in word {
@@ -68,16 +66,16 @@ class Trie {
     }
 
     public func longestInDictionary()->String {
-        return longest(root, "")
+        return bfs(root, "")
     }
     
-    private func longest(_ node:Node? ,_ curRes:String)-> String {
+    private func bfs(_ node:Node? ,_ curRes:String)-> String {
         if node == nil { return curRes }
        
         var result = curRes
         for key in node!.map.keys {
             if node!.map[key]!.isWord {
-                let res =  longest(node!.map[key]!,"\(curRes)\(key)")
+                let res =  bfs(node!.map[key]!,"\(curRes)\(key)")
                 if result.count > res.count {
                     break
                 }else if result.count == res.count {
