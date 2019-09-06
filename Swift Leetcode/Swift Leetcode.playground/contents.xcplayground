@@ -57,5 +57,9 @@
         <page name='169 求众数'/>
         <page name=' 53 最大子序和'/>
         <page name='240. 搜索二维矩阵 II'/>
+        <page name='212 单词搜索 II'/>
+        <page name='309 最佳股票买卖时机 含 冷冻期'/>
+        <page name='150. 逆波兰表达式求值'/>
+        <page name='131 分割回文串'/>
     </pages>
 </playground>
