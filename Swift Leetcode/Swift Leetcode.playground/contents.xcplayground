@@ -61,5 +61,7 @@
         <page name='309 最佳股票买卖时机 含 冷冻期'/>
         <page name='150. 逆波兰表达式求值'/>
         <page name='131 分割回文串'/>
+        <page name='23 合并K个排序链表'/>
+        <page name='124 二叉树的最大路径和'/>
     </pages>
 </playground>

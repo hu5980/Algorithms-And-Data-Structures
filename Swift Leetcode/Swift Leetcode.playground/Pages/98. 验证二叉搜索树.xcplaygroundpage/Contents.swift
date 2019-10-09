@@ -45,9 +45,10 @@ public class TreeNode {
     }
 }
 
-
+/*:
+ 方法一 采用中序遍历来做
+ */
 class Solution {
-    
     func _kisValidBST(_ root: TreeNode?,_ vals:inout [Int]) {
         if root == nil { return  }
         _kisValidBST(root?.left, &vals)
@@ -59,7 +60,7 @@ class Solution {
         var res = true
         var vals = [Int]()
         _kisValidBST(root, &vals)
-        if vals < 2 { return res }
+        if vals.count < 2 { return res }
         for i in 1..<vals.count {
             if vals[i] <= vals[i-1] {
                 res = false
@@ -69,7 +70,9 @@ class Solution {
     }
 }
 
-
+/*:
+ 方法二 ：递归
+ */
 class Solution1 {
     func isValidBST(_ root: TreeNode?) -> Bool {
         return helper(root,nil,nil)
@@ -87,5 +90,6 @@ class Solution1 {
         }
         return helper(root.left, min,root.val) && helper(root.right,root.val,max)
     }
-    
 }
+
+
