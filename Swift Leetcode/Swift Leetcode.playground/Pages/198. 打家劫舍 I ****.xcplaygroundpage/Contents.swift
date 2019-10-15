@@ -169,6 +169,12 @@ class Solution5 {
     }
 }
 
+class Solution6 {
+    func rob(_ nums: [Int]) -> Int {
+       return 1
+    }
+}
+
 let s = Solution4()
 let res = s.rob([114,4])
 print(res)
