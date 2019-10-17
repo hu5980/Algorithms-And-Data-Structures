@@ -9,5 +9,11 @@
         <page name='509 斐波拉契数列'/>
         <page name='226 翻转二叉树'/>
         <page name='236 二叉树的最近公共祖先'/>
+        <page name='513 找树左下角的值'/>
+        <page name='303 区域和检索-数组不可变'/>
+        <page name='308 区域和检索 - 数组可修改'/>
+        <page name='208 实现一个 Trie (前缀树)'/>
+        <page name='211. 添加与搜索单词 - 数据结构设计'/>
+        <page name='677. 键值映射'/>
     </pages>
 </playground>
