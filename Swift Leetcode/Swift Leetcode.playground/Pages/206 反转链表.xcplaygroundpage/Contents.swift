@@ -26,9 +26,8 @@ public class ListNode {
     }
 }
 
-class Solution {
 
-    
+class Solution {
     /// 非递归的解题方式
     ///
     /// - Parameter head: <#head description#>
@@ -80,6 +79,10 @@ class Solution {
             return newNode
         }
     }
+    
+    
+   
+    
 }
 
 

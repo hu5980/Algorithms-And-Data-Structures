@@ -2,20 +2,22 @@
 
 import Foundation
 
+class Node {
+      var value:Int
+      var next:Node?
+      
+      init(_ value:Int) {
+          self.value = value
+          self.next = nil
+      }
+  }
+
 class Link{
     
     private var root:Node?
     private var size:Int
     
-    class Node {
-        var value:Int
-        var next:Node?
-        
-        init(_ value:Int) {
-            self.value = value
-            self.next = nil
-        }
-    }
+  
     
     init() {
         self.root = nil
@@ -106,24 +108,47 @@ class Link{
     ///
     /// - Parameter node: <#node description#>
     /// - Returns: <#return value description#>
-    private func reversalLink_A(_ node:Node?) -> Node? {
+    private func reversalLink_A(_ head:Node?) -> Node? {
         
-        if node == nil {
-            return node
-        }
+//        if node == nil {
+//            return node
+//        }
+//
+//        let dummyNode = Node.init(-1)
+//        dummyNode.next = node
+//        let preNode = dummyNode.next
+//        var curNode = preNode?.next
+//
+//        while curNode != nil {
+//            preNode?.next = curNode?.next
+//            curNode?.next = dummyNode.next
+//            dummyNode.next = curNode
+//            curNode = preNode?.next
+//        }
+//        return dummyNode.next
         
-        let dummyNode = Node.init(-1)
-        dummyNode.next = node
-        let preNode = dummyNode.next
-        var curNode = preNode?.next
+        if head == nil || head?.next == nil {
+               return head
+           }
+           
+           var now = head
+           var pre:Node? = nil
+           var next:Node? = nil
+           var tail:Node? = nil
+           
+           while now != nil {
+               next = now?.next
+               
+               if next == nil {
+                   tail = now
+               }
+               
+               now?.next = pre
+               pre = now
+               now = next
+           }
+           return tail
         
-        while curNode != nil {
-            preNode?.next = curNode?.next
-            curNode?.next = dummyNode.next
-            dummyNode.next = curNode
-            curNode = preNode?.next
-        }
-        return dummyNode.next
     }
     
     
@@ -143,9 +168,11 @@ class Link{
 
 let link = Link()
 
-print("反转前")
+//print("反转前")
 link.add(3)
-
+link.add(4)
+link.add(5)
+link.add(6)
 
 
 link.printfLink()
@@ -167,3 +194,5 @@ link.printfLink()
 //let a = 3.142344
 //
 //print(a.hashValue)
+
+

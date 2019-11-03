@@ -96,34 +96,25 @@ class Solution {
         if nums.count < 3 {
             return [[Int]]()
         }
-        var newNums =   nums.sorted()
-
+        let newNums =   nums.sorted()
         var result:[[Int]] = [[Int]]()
-        
         for i in 0..<newNums.count - 2 {
             if i > 0 && newNums[i] == newNums[i-1] {
                 continue
             }
-            
             var left = i + 1
             var right = newNums.count - 1
             let need = 0 - newNums[i]
-            
             while left < right {
                 if newNums[left] + newNums[right] == need {
-                 
                     let num = [newNums[i],newNums[left],newNums[right]]
-    
                     result.append(num)
-           
-                    
                     while left < right && newNums[left] == newNums[left + 1] {
                         left += 1
                     }
                     while left < right && newNums[right] == newNums[right - 1] {
                         right -= 1
                     }
-                    
                     left += 1
                     right -= 1
                     
