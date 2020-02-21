@@ -33,7 +33,7 @@ import Foundation
 
 class Solution {
     func rob(_ nums: [Int]) -> Int {
-        if nums.count == 0 {
+        if nums.count == 0 { 
             return 0
         }
         

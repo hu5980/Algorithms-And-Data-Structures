@@ -8,7 +8,7 @@
         <page name='88 合并两个有序数组'/>
         <page name='509 斐波拉契数列'/>
         <page name='226 翻转二叉树'/>
-        <page name='236 二叉树的最近公共祖先'/>
+        <page name='236 二叉树的最近公共祖先   *****'/>
         <page name='513 找树左下角的值'/>
         <page name='303 区域和检索-数组不可变'/>
         <page name='308 区域和检索 - 数组可修改'/>
@@ -24,5 +24,11 @@
         <page name='257. 二叉树的所有路径'/>
         <page name='437. 路径总和 III'/>
         <page name='235. 二叉搜索树的最近公共祖先'/>
+        <page name='17. 电话号码的字母组合'/>
+        <page name='46. 全排列'/>
+        <page name='455. 分发饼干'/>
+        <page name='392. 判断子序列'/>
+        <page name='47. 全排列 II'/>
+        <page name='77. 组合'/>
     </pages>
 </playground>

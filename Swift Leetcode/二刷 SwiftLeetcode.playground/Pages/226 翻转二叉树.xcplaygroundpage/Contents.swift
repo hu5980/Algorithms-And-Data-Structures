@@ -65,7 +65,7 @@ class Solution1 {
         queue.append(root)
         while !queue.isEmpty {
             let node =  queue.removeLast()
-            var temp = node?.left
+            let temp = node?.left
             node?.left = node?.right
             node?.right = temp
             if root?.left != nil {
