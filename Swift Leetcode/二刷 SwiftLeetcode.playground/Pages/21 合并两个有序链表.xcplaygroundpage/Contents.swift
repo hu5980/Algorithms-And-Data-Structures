@@ -12,6 +12,10 @@ import Foundation
 
  */
 
+func test() {
+    
+}
+
 public class ListNode {
     public var val: Int
     public var next: ListNode?
