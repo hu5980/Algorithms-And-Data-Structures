@@ -12,9 +12,6 @@ import Foundation
 
  */
 
-func test() {
-    
-}
 
 public class ListNode {
     public var val: Int
